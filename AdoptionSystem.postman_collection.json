@@ -1,0 +1,514 @@
+{
+	"info": {
+		"_postman_id": "3fc2d523-8724-4337-bb78-1dc269a71e7c",
+		"name": "AdoptionSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956959"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "goku",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "son",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "gssred",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "gssr@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Goku1234$",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "84565495",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/PC/Downloads/goku.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "gssred",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Goku1234$",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getToken",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E1OTdhYWU4MTdhMGMyYTQ3YjhlZGMiLCJ1c2VybmFtZSI6Imdzc3JlZCIsIm5hbWUiOiJnb2t1Iiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODkwNTYzNiwiZXhwIjoxNzM4OTE2NDM2fQ.wLvnv5_vU2ta6mbh9RRvizark9NcF3_T4Z1mW4KE-OQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/test",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/v1/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "getUser",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E1OTdhYWU4MTdhMGMyYTQ3YjhlZGMiLCJ1c2VybmFtZSI6Imdzc3JlZCIsIm5hbWUiOiJnb2t1Iiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk4NDcwMSwiZXhwIjoxNzM4OTk1NTAxfQ.Z-g19DchOq8kuFCWo0aHqdwSrDZlrKao1HcghasHpZU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/v1/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E1OTdhYWU4MTdhMGMyYTQ3YjhlZGMiLCJ1c2VybmFtZSI6Imdzc3JlZCIsIm5hbWUiOiJnb2t1Iiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODkwNTYzNiwiZXhwIjoxNzM4OTE2NDM2fQ.wLvnv5_vU2ta6mbh9RRvizark9NcF3_T4Z1mW4KE-OQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/v1/user/getUser/67a597aae817a0c2a47b8edc",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"user",
+								"getUser",
+								"67a597aae817a0c2a47b8edc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E1MmY1MDcwZDNkZmJhN2NhOWY0MDciLCJ1c2VybmFtZSI6ImdzMjIiLCJuYW1lIjoiZ29rdSIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5NTc1ODQsImV4cCI6MTczODk2ODM4NH0.hgPRHYARzn-XGYGfVN4WNXlSk3zFv2p2rq0TOF3zlIc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "hola",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "gss4@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/v1/user/putUser/67a52f5070d3dfba7ca9f407",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"user",
+								"putUser",
+								"67a52f5070d3dfba7ca9f407"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/v1/user/deleteUser",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"user",
+								"deleteUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Animal",
+			"item": [
+				{
+					"name": "AddAnimal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Alfredo",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Con mucho pelo de color negro",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "17 meses",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Perro",
+									"type": "text"
+								},
+								{
+									"key": "keeper",
+									"value": "67a597aae817a0c2a47b8edc",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/saveAnimal",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"saveAnimal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAnimal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/getAnimal",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"getAnimal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAnimalById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/getAnimal/67a6cd19600455cf29fb29a3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"getAnimal",
+								"67a6cd19600455cf29fb29a3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAnimal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "keeper",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/updateAnimal/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"updateAnimal",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAnimal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/deleteAnimal/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"deleteAnimal",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointment",
+			"item": [
+				{
+					"name": "getAppointment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "keeper",
+									"value": "67a597aae817a0c2a47b8edc",
+									"type": "text"
+								},
+								{
+									"key": "pet",
+									"value": "67a6cd19600455cf29fb29a3",
+									"type": "text"
+								},
+								{
+									"key": "dateAppointment",
+									"value": "2025-02-07T14:00:00.000Z",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "problemas renales",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/saveAppointment",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"saveAppointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAppoint",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/getAppointment",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"getAppointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAppoint",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/deleteAppointment/67a6cf6bbf3473733db2492f",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"deleteAppointment",
+								"67a6cf6bbf3473733db2492f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
